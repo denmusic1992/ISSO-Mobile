@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Общие настройки">
+        <EditTextPreference
+            android:key="Login"
+            android:title="Имя пользователя (логин)"
+            android:inputType="text"
+            android:singleLine="true"
+            android:defaultValue=""
+            android:maxLines="1" />
+        <EditTextPreference
+            android:key="Pass"
+            android:title="Пароль"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:defaultValue=""
+            android:maxLines="1" />
+        <ListPreference
+            android:key="Theme"
+            android:title="Тема приложения"
+            android:entries="@array/themes"
+            android:entryValues="@array/themesEnum"
+            android:defaultValue="1"/>
+        <EditTextPreference
+            android:key="Address"
+            android:title="Адрес сервера"
+            android:inputType="text"
+            android:singleLine="true"
+            android:defaultValue="aisisso.ru"
+            android:maxLines="1" />
+        <CheckBoxPreference
+            android:key="Voice"
+            android:title="Голосовое оповещение в 'Автовыборе'"
+            android:defaultValue="true"/>
+        <CheckBoxPreference
+            android:key="HideButtons"
+            android:title="Скрывать кнопки при бездействии в 'Автовыборе'"
+            android:defaultValue="true"/>
+    </PreferenceCategory>
+</PreferenceScreen>

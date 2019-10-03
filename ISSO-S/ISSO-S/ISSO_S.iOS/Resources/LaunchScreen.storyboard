@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="X5k-f2-b5h" launchScreen="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gAE-YM-kbH">
+            <objects>
+                <viewController id="X5k-f2-b5h" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y8P-hJ-Z43"/>
+                        <viewControllerLayoutGuide type="bottom" id="9ZL-r4-8FZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yd7-JS-zBw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="launcher.png" translatesAutoresizingMaskIntoConstraints="NO" id="23" fixedFrame="YES" preservesSuperviewLayoutMargins="YES">
+                                <rect key="frame" x="131.5" y="290.5" width="151" height="151"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinX="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="АИС ИССО-SX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="272" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" preservesSuperviewLayoutMargins="YES">
+                                <rect key="frame" x="20" y="197" width="374" height="51"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="tintColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XAI-xm-WK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="349" y="339"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon-60.png" width="60" height="60"/>
+        <image name="comments_light.png" width="144" height="144"/>
+        <image name="Default-568h.png" width="320" height="568"/>
+        <image name="Default-Portrait.png" width="768" height="1004"/>
+        <image name="Default.png" width="320" height="480"/>
+        <image name="draw_0.png" width="144" height="144"/>
+        <image name="draw_1.png" width="144" height="144"/>
+        <image name="draw_2.png" width="144" height="144"/>
+        <image name="draw_3.png" width="144" height="144"/>
+        <image name="draw_4.png" width="144" height="144"/>
+        <image name="draw_5.png" width="144" height="144"/>
+        <image name="draw_6.png" width="144" height="144"/>
+        <image name="geolocation.png" width="512" height="512"/>
+        <image name="Icon-76.png" width="76" height="76"/>
+        <image name="Icon-Small-40.png" width="40" height="40"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="Icons/autoselect_light.png" width="40" height="40"/>
+        <image name="Icons/camera_dark.png" width="32" height="32"/>
+        <image name="Icons/camera_light.png" width="32" height="32"/>
+        <image name="Icons/cancel_light.png" width="24" height="24"/>
+        <image name="Icons/define_location_dark.png" width="24" height="24"/>
+        <image name="Icons/filter_dark.png" width="32" height="32"/>
+        <image name="Icons/filter_enable_light.png" width="32" height="32"/>
+        <image name="Icons/free_location_dark.png" width="24" height="24"/>
+        <image name="Icons/full_screen.png" width="24" height="24"/>
+        <image name="Icons/icon_launcher.png" width="80" height="80"/>
+        <image name="Icons/iosbackarrow.png" width="15" height="25"/>
+        <image name="Icons/list_light.png" width="32" height="32"/>
+        <image name="Icons/map_light.png" width="32" height="32"/>
+        <image name="Icons/map_list_light.png" width="32" height="32"/>
+        <image name="Icons/marker_after_light.png" width="16" height="16"/>
+        <image name="Icons/marker_ahead.png" width="32" height="32"/>
+        <image name="Icons/marker_ahead_light.png" width="32" height="32"/>
+        <image name="Icons/marker_behind.png" width="32" height="32"/>
+        <image name="Icons/marker_behind_light.png" width="32" height="32"/>
+        <image name="Icons/marker_far.png" width="24" height="24"/>
+        <image name="Icons/marker_noway.png" width="32" height="32"/>
+        <image name="Icons/new_rem_light.png" width="32" height="32"/>
+        <image name="Icons/normal_map_dark.png" width="32" height="32"/>
+        <image name="Icons/normal_map_light.png" width="32" height="32"/>
+        <image name="Icons/photo.png" width="32" height="32"/>
+        <image name="Icons/satellite_dark.png" width="32" height="32"/>
+        <image name="Icons/satellite_light.png" width="32" height="32"/>
+        <image name="Icons/save_light.png" width="32" height="32"/>
+        <image name="Icons/settings.png" width="32" height="32"/>
+        <image name="Icons/settings_light.png" width="40" height="40"/>
+        <image name="Icons/support_light.png" width="40" height="40"/>
+        <image name="Icons/synchronize_light.png" width="40" height="40"/>
+        <image name="Icons/terrain_dark.png" width="32" height="17.333334"/>
+        <image name="Icons/terrain_light.png" width="32" height="17.333334"/>
+        <image name="launcher.png" width="512" height="512"/>
+        <image name="no_comments_light.png" width="144" height="144"/>
+        <image name="no_geolocation.png" width="512" height="512"/>
+        <image name="photo.png" width="64" height="64"/>
+        <image name="settings.png" width="64" height="64"/>
+        <image name="Icons/152x152.png" width="152" height="152"/>
+        <image name="Icons/167x167.png" width="167" height="167"/>
+        <image name="Icons/180x180.png" width="180" height="180"/>
+        <image name="Icons/20x20.png" width="20" height="20"/>
+        <image name="Icons/29x29.png" width="29" height="29"/>
+        <image name="Icons/40x40.png" width="40" height="40"/>
+        <image name="Icons/57x57.png" width="57" height="57"/>
+        <image name="Icons/58x58.png" width="58" height="58"/>
+        <image name="Icons/60x60.png" width="60" height="60"/>
+        <image name="Icons/72x72.png" width="72" height="72"/>
+        <image name="Icons/76x76.png" width="76" height="76"/>
+        <image name="Icons/80x80.png" width="80" height="80"/>
+        <image name="Icons/87x87.png" width="87" height="87"/>
+    </resources>
+    <color key="tintColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+</document>

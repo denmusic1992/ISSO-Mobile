@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!--<com.polites.android.GestureImageView
+        android:id="@+id/defImageView"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="match_parent"
+        gesture-image:min-scale="0.1"
+        gesture-image:max-scale="10.0"/>-->
+    <LinearLayout
+        android:id="@+id/photoDefLinLayout"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="0dip"
+        android:layout_weight="5" />
+    <TextView
+        android:id="@+id/defPhotoName"
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:textSize="16sp"
+        android:maxLines="2"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="1" />
+</LinearLayout>

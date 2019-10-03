@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="themes">
+        <item>Темная</item>
+        <item>Светлая</item>
+    </string-array>
+    <string-array name="voice">
+        <item>Темная</item>
+        <item>Светлая</item>
+    </string-array>
+
+    <string-array name="themesEnum">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="months">
+        <item>январь</item>
+        <item>февраль</item>
+        <item>март</item>
+        <item>апрель</item>
+        <item>май</item>
+        <item>июнь</item>
+        <item>июль</item>
+        <item>август</item>
+        <item>сентябрь</item>
+        <item>октябрь</item>
+        <item>ноябрь</item>
+        <item>декабрь</item>
+    </string-array>
+</resources>

@@ -1,0 +1,59 @@
+<resources>
+
+    <!--&lt;!&ndash; Base application theme. &ndash;&gt;-->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+    <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+    <!--</style>-->
+
+    <style name="Advanced" parent="Theme.AppCompat.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AdvancedLight" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="style_light">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="style_dark">
+        <item name="android:textColor">@color/background_material_light</item>
+    </style>
+
+    <style name="AppTheme" parent="android:Theme.Holo">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+    <style name="AppThemeLight" parent="android:Theme.Holo.Light">
+        <item name="background">@color/background_material_light</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="DialogTheme" parent="android:Theme.Holo.Dialog.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="DialogThemeLight" parent="android:Theme.Holo.Light.Dialog.NoActionBar.MinWidth">
+        <item name="background">@color/background_material_light</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="android:Widget.Holo.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+
+    <style name="FullscreenActionBarStyleLight" parent="android:Widget.Holo.ActionBar">
+        <item name="android:background">@color/background_material_light</item>
+    </style>
+
+    <style name="StyleColorLight" parent="">
+        <item name="android:background">#dcdcdc</item>
+    </style>
+
+    <style name="StyleColorDark" parent="">
+        <item name="android:background">#323232</item>
+    </style>
+
+</resources>

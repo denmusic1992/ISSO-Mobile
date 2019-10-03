@@ -1,0 +1,20 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="holo_primary">#4a4a4a</color>
+    <color name="holo_light_primary">#aeaeae</color>
+    <color name="primary_material_light">#b3b3b3</color>
+    <color name="statusBarColor">#a9a9a9</color>
+    <color name="windowBackground">#9d9c9c</color>
+    <color name="textAheadLight">#558B2F</color>
+    <color name="textAheadDark">#B2FF59</color>
+    <color name="textBehindLight">#1565C0</color>
+    <color name="textBehindDark">#90CAF9</color>
+    <color name="almostTransparent">#22000000</color>
+    <color name="TransparentLight">#60000000</color>
+    <color name="TransparentDark">#60FFFFFF</color>
+    <color name="orangeTextColor">#FF6500</color>
+    <color name="redTextColor">#FF0000</color>
+    <color name="veryRedTextColor">#CC0000</color>
+    <color name="greenTextColor">#32CD32</color>
+</resources>

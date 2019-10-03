@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>f4d15b45-fdb9-44f5-ab50-4cb1035d133e</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>ISSO_S</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)AddNewRating.xaml.cs">
+      <DependentUpon>AddNewRating.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)AlertTextInputPage.xaml.cs">
+      <DependentUpon>AlertTextInputPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomRenderers\Add_button.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomRenderers\CustomEntryNoUnderline.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomRenderers\CustomEntryNoUnderlineTopStart.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomRenderers\EntryTopStart.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomRenderers\MyButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomRenderers\MyNavigationPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomRenderers\MyNoHelperEntry.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomRenderers\MyPicker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\EnumsHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\ReflectionHelpers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generated\Common_ClientBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generated\Common_ClientBase.iOS.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generated\DBHelperClass.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generated\ISSO_S_ClientBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generated\ISSO_S_ClientBase.iOS.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\DoubleExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FullScreenImage.xaml.cs">
+      <DependentUpon>FullScreenImage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)InputAlertDialogBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IAis7MobileCommonServerCoreXamarin.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IAis7MobileIssoSServerCoreXamarin.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewActivity.xaml.cs">
+      <DependentUpon>IssoViewActivity.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MasterDetailPage1.xaml.cs">
+      <DependentUpon>MasterDetailPage1.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MasterDetailPage1Master.xaml.cs">
+      <DependentUpon>MasterDetailPage1Master.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)CustomRenderers\MyContentPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MySyncPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MyZoomImage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomRenderers\PinchToZoomContainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SyncPage.xaml.cs">
+      <DependentUpon>SyncPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Testik.xaml.cs">
+      <DependentUpon>Testik.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)IssoViewActivity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MasterDetailPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MasterDetailPage1Master.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)AddNewRating.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)AlertTextInputPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)FullScreenImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Testik.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SyncPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

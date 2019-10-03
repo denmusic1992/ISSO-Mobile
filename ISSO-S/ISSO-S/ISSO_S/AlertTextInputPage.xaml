@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ISSO_S.AlertTextInputPage">
+  <ContentView.Content>
+        <StackLayout
+            Padding="10"
+            BackgroundColor="White"
+            HorizontalOptions="CenterAndExpand"
+            Spacing="5"
+            VerticalOptions="CenterAndExpand">
+            <Label
+                x:Name="TitleLabel"
+                FontSize="14"
+                Text="Введите комментарий:" />
+            <Entry x:Name="InputEntry" Placeholder="[комментарий отсутствует]" />
+            <Button
+                x:Name="CloseButton"
+                BackgroundColor="#44104e8b"
+                Text="Ok">
+            </Button>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

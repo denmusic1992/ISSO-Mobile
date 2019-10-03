@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:calendar="clr-namespace:XamForms.Controls;assembly=XamForms.Controls.Calendar"
+             xmlns:controls="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             xmlns:converters="clr-namespace:CommonClassesLibrary.Converters;assembly=CommonClassesLibrary"
+             x:Class="ISSO_I.IssoViewPages.ForDefectTable.Views.DateDefectContentView">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <converters:InverseConverter x:Key="InverseConverter" />
+        </ResourceDictionary>
+    </ContentView.Resources>
+  <ContentView.Content>
+      <StackLayout Margin="0, 0, 0, 30">
+          <Label Text="Выбор даты ввода дефекта" Style="{StaticResource LabelStandard}" HorizontalOptions="Fill"
+                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="10" />
+          <calendar:Calendar BorderColor="Accent" BorderWidth="2" SelectedBackgroundColor="Accent" x:Name="MyCalendar"
+                             SelectedTextColor="White" SelectedBorderWidth="0" TitleLeftArrowTextColor="Accent" StartDay="Monday" WeekdaysShow="False"
+                             TitleRightArrowTextColor="Accent" EnableTitleMonthYearView="True" DateCommand="{Binding DateChanged}" Margin="5" 
+                             SelectedDate="{Binding SelectedDate}"/>
+          <Frame BorderColor="Accent" Padding="5" CornerRadius="5" HorizontalOptions="FillAndExpand" Margin="10"
+                 BackgroundColor="Transparent" IsVisible="{Binding IsForConstrs}">
+              <StackLayout>
+                  <Label Text="Конструкция ИССО" Style="{StaticResource LabelSmall}" />
+                  <Button BorderWidth="1" BorderColor="Accent" BackgroundColor="Transparent" Text="{Binding NconstrsChosen}" 
+                          Image="minus.png" ContentLayout="Left, 10" Padding="5" Clicked="ChooseConstrClicked" Margin="10, 0, 10, 0"
+                          IsEnabled="{Binding AllConstrs, Converter={StaticResource InverseConverter}}" />
+                  <controls:CheckBox Text="В целом на сооружение" IsChecked="{Binding AllConstrs}" Margin="10, 0, 10, 0"
+                                     LabelPosition="After" Type="Material" TextColor="Black"
+                                     IsEnabled="{Binding ConstrsNotChosen}" />
+              </StackLayout>
+          </Frame>
+      </StackLayout>
+  </ContentView.Content>
+</ContentView>

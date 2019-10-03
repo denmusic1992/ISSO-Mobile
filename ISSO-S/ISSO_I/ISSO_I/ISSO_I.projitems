@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{6C6321B0-2EDE-4977-BBA8-C3E7DF55868A}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>ISSO_I</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Synchronization\SyncPopupPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Additional Classes\ais7BinaryIStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Additional Classes\ConnectionClass.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Additional Classes\UserCollections.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)CustomRenderes\CustomEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomRenderes\CustomEntry.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomRenderes\MyBackHandleTabbedPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomRenderes\MyListView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomRenderes\MyNavigationPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomRenderes\MyNoHelperEntry.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomRenderes\MyPicker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomRenderes\PDFView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomRenderes\TextLikeDatePicker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomRenderes\ZoomableScrollView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Drivers\ColumnDrivers\ais7DataColumnDriver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Drivers\ColumnDrivers\ais7DataColumnDriver_V_ISSO_Geo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Drivers\ColumnDrivers\ais7DataColumnDriver_V_ISSO_OTC_EXP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Drivers\ColumnDrivers\ais7DataColumnDriver_V_ISSO_W_ISSO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Drivers\TableDrivers\ais7DataTableDriver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Drivers\TableDrivers\Ais7DataTableDriver_I_D_SH.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Drivers\TableDrivers\Ais7DataTableDriver_I_ISSO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Drivers\TableDrivers\Ais7DataTableDriver_I_MP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Drivers\TableDrivers\Ais7DataTableDriver_I_OPORA.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Drivers\TableDrivers\Ais7DataTableDriver_I_PODXOD.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Drivers\TableDrivers\Ais7DataTableDriver_I_PREP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Drivers\TableDrivers\Ais7DataTableDriver_I_PROEZD.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Drivers\TableDrivers\Ais7DataTableDriver_I_PS.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Drivers\TableDrivers\Ais7DataTableDriver_I_SXOD.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\DoubleExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GeneratedCode\Common_ClientBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GeneratedCode\Common_ClientBase.iOS.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GeneratedCode\DBHelperClass.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GeneratedCode\ISSO_I_ClientBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GeneratedCode\ISSO_I_ClientBase.iOS.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IAis7MobileCommonServerCoreXamarin.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IAis7MobileIssoIServerCoreXamarin.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IClearCacheInterface.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewActivity.xaml.cs">
+      <DependentUpon>IssoViewActivity.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\AddIssoDefectContentPageList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\ais7ConstrItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\ais7DefectItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\ais7IssoDefectsTreeNode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\ais7IssoDefectsTreeNode2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Commands\AddDefectPhotoCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Commands\CloseAndDeletePhotoCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Commands\DateSelectedCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Commands\ParameterEditedCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Commands\PictureTouchedCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Models\CreateDefectModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Models\DefectParameter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Models\FotoDefects.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Models\I_DEFECT.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Models\i_def_descr.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Models\i_def_mod.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\ViewModels\AdditionalDefectParametersContentViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\ViewModels\DateDefectContentViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\ViewModels\QuantityParametersContentPageModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\ViewModels\QualityParametersTreeViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\ViewModels\SummaryDefectContentViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Views\AdditionalDefectParametersContentView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Views\CreateDefectContentPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\DefectContentPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\DefectForC_GR_CONSTR_Page.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Defect_TreeView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\ViewModels\CreateDefectViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Views\DateDefectContentView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Views\QuantityParametersContentPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Views\QualityParametersTreeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Views\SummaryDefectContentView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForPDFView\PdfContentPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForPhotos\AddNewPhotoContentPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForPhotos\PhotoContentPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForTreeView\EditCoordsContentPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForTreeView\TreeContentPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)PopupTypes\FindDefectsPopupPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)PopupTypes\Models\MultiselectItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PopupTypes\ViewModels\MultiselectListViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PopupTypes\Views\MultiselectListView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Sqlite\DefectContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sqlite\SqliteReader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Synchronization\GetUserCollectionsContentPage.xaml.cs">
+      <DependentUpon>GetUserCollectionsContentPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\AdvancedDefectInfoPage.xaml.cs">
+      <DependentUpon>AdvancedDefectInfoPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Ais7AdvancedDefect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Models\Ais7DefectParamValue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Ais7InfoDefect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Ais7IssoDefect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\DefectFilter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\DefectTreeNode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\DefectTreeView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForPDFView\FileManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForPDFView\PDFContentView.xaml.cs">
+      <DependentUpon>PDFContentView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForPDFView\PdfDocEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForPDFView\PDFViewer.xaml.cs">
+      <DependentUpon>PDFViewer.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForPDFView\RestApiHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForPDFView\ThumbContentView.xaml.cs">
+      <DependentUpon>ThumbContentView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForPhotos\DataInformation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForPhotos\PhotoGalleryContentView.xaml.cs">
+      <DependentUpon>PhotoGalleryContentView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForTreeView\TreeView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\ZoomableContentView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MasterPage\MasterDetailPage1.xaml.cs">
+      <DependentUpon>MasterDetailPage1.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MasterPage\MasterDetailPage1Master.xaml.cs">
+      <DependentUpon>MasterDetailPage1Master.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MasterPage\MainMapsActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MasterPage\MainPageLinearList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MasterPage\MainSettingsActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MasterPage\MainSyncActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Synchronization\MySyncPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PopupTypes\DefFilterPopupPage.xaml.cs">
+      <DependentUpon>DefFilterPopupPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)PopupTypes\EditGeoPage.xaml.cs">
+      <DependentUpon>EditGeoPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)PopupTypes\EditorXF.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PopupTypes\FullScreenImageContainer.xaml.cs">
+      <DependentUpon>FullScreenImageContainer.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)PopupTypes\ModelForSelect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PopupTypes\PinchToZoomContainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PopupTypes\SelectDatePickerPage.xaml.cs">
+      <DependentUpon>SelectDatePickerPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)PopupTypes\SelectedListViewPopupPage.xaml.cs">
+      <DependentUpon>SelectedListViewPopupPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)PopupTypes\SelectedToFontAttributeConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PopupTypes\TextPopupPage.xaml.cs">
+      <DependentUpon>TextPopupPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Singleton\BuildTree.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Synchronization\SyncPopupPage.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>SyncPopupPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForTreeView\TableTREE.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForTreeView\TableTreeContentView.xaml.cs">
+      <DependentUpon>TableTreeContentView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)IssoViewPages\ForTreeView\TableTreeView.xaml.cs">
+      <DependentUpon>TableTreeView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MasterPage\MasterDetailPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MasterPage\MasterDetailPage1Master.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)IssoViewActivity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)IssoViewPages\ForTreeView\TableTreeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)IssoViewPages\ForTreeView\TableTreeContentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)PopupTypes\SelectDatePickerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)PopupTypes\SelectedListViewPopupPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)PopupTypes\TextPopupPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)PopupTypes\EditGeoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)PopupTypes\DefFilterPopupPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\AdvancedDefectInfoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)PopupTypes\FullScreenImageContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)IssoViewPages\ForPhotos\PhotoGalleryContentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Drivers\ColumnDrivers\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Drivers\TableDrivers\" />
+    <Folder Include="$(MSBuildThisFileDirectory)PopupTypes\Views\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Synchronization\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)IssoViewPages\ForPDFView\PDFViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)IssoViewPages\ForPDFView\PDFContentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Synchronization\GetUserCollectionsContentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)IssoViewPages\ForPDFView\ThumbContentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)IssoViewPages\ForPhotos\PhotoContentPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)IssoViewPages\ForTreeView\TreeContentPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)IssoViewPages\ForPDFView\PdfContentPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\DefectContentPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)IssoViewPages\ForTreeView\EditCoordsContentPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)IssoViewPages\ForPhotos\AddNewPhotoContentPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\AddIssoDefectContentPageList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)PopupTypes\FindDefectsPopupPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\DefectForC_GR_CONSTR_Page.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Views\CreateDefectContentPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Views\QuantityParametersContentPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Views\AdditionalDefectParametersContentView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Views\QualityParametersTreeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Views\SummaryDefectContentView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)IssoViewPages\ForDefectTable\Views\DateDefectContentView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)PopupTypes\Views\MultiselectListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

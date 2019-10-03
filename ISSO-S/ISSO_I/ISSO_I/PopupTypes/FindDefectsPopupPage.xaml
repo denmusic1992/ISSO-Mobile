@@ -1,0 +1,27 @@
+﻿<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ISSO_I.PopupTypes.FindDefectsPopupPage">
+    <StackLayout>
+        <Frame Margin="10" BorderColor="Accent" CornerRadius="5" Padding="0">
+            <StackLayout VerticalOptions="Fill">
+                <Label Text="Введите фильтр по конструктиву или по дефекту:" Margin="10" Style="{StaticResource LabelSmall}"/>
+                <Grid Margin="10, 0, 10, 0" HorizontalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Entry Grid.Column="0" Placeholder="[Фильтр отсутствует]" x:Name="filter_entry"/>
+                    <Button x:Name="microphone_button" Grid.Column="1" Image="microphone.png" BackgroundColor="Accent"
+                                Clicked="Microphone_Clicked" WidthRequest="40" HeightRequest="40" CornerRadius="5" />
+                </Grid>
+                <Button VerticalOptions="Fill" Text="Найти дефект" Style="{StaticResource ButtonStandard}"
+                            x:Name="find_defect_button" Clicked="ShowSearchPage" />
+            </StackLayout>
+        </Frame>
+        <Button VerticalOptions="Fill" Text="Выбрать из дерева дефектов" Style="{StaticResource ButtonStandard}"
+                    Clicked="ShowTraditionalPage" />
+    </StackLayout>
+</ContentView>

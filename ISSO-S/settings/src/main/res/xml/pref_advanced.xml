@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Общие настройки">
+        <!--<EditTextPreference
+            android:key="Host"
+            android:title="Адрес сервера синхронизации"
+            android:inputType="text"
+            android:singleLine="true"
+            android:maxLines="1" />
+        <EditTextPreference
+            android:key="Port"
+            android:title="Порт сервера синхронизации"
+            android:inputType="number"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:defaultValue="9999"/>
+        <CheckBoxPreference
+            android:key="Autoselect"
+            android:title="Автовыбор" />-->
+
+        <ListPreference
+            android:key="Theme"
+            android:title="Тема приложения"
+            android:entries="@array/themes"
+            android:entryValues="@array/themesEnum"
+            android:defaultValue="1"/>
+        <EditTextPreference
+            android:key="Address"
+            android:title="Адрес сервера"
+            android:inputType="text"
+            android:singleLine="true"
+            android:defaultValue="aisisso.ru"
+            android:maxLines="1" />
+    </PreferenceCategory>
+</PreferenceScreen>

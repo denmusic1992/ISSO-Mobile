@@ -1,0 +1,14 @@
+issostore.jks - ISSO-R
+Keystore pass: black1992
+KeyAlias: aisisso
+KeyPass: LECfRBlack1992
+
+keystore.jks - ISSO-S
+Keystore pass: black1992
+KeyAlias: isso
+KeyPass: black1992
+
+issostore.jks - ISSO-I
+Keystore pass: black1992
+KeyAlias: aisisso
+KeyPass: LECfRBlack1992

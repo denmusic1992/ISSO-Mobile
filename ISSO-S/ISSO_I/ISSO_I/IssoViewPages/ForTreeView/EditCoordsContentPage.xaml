@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<backhandlers:MyBackHandleContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:backhandlers="clr-namespace:CommonClassesLibrary.BackHandlers;assembly=CommonClassesLibrary"
+             x:Class="ISSO_I.IssoViewPages.ForTreeView.EditCoordsContentPage">
+    <backhandlers:MyBackHandleContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" x:Name="MapGrid" Grid.Row="0" Grid.Column="0">
+                <StackLayout Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" x:Name="ForMap" Margin="10" />
+                <StackLayout Grid.Column="0" Grid.Row="0" HorizontalOptions="Start" VerticalOptions="Start" Orientation="Horizontal">
+                    <Button WidthRequest="50" HeightRequest="50" HorizontalOptions="Start" VerticalOptions="Start" 
+                            BackgroundColor="#CC525252" x:Name="Btn_Follow"/>
+                    <Button HeightRequest="50" WidthRequest="50" HorizontalOptions="Start" VerticalOptions="Start" BackgroundColor="#CC525252" 
+                            TextColor="White" x:Name="Btn_Satellite" Clicked="Btn_Satellite_Clicked" />
+                </StackLayout>
+            </Grid>
+            <StackLayout Grid.Row="1" Grid.Column="0" >
+                <Label Text="Начальная точка ИССО" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Margin="10, 0, 10, 5" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="5*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="GeoStartPointImage" WidthRequest="40" HeightRequest="40" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0" />
+                    <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1">
+                        <Label x:Name="StartLatitude" HorizontalOptions="Fill" HorizontalTextAlignment="Center" />
+                        <Label x:Name="StartLongitude" HorizontalOptions="Fill" HorizontalTextAlignment="Center" />
+                    </StackLayout>
+                    <Button x:Name="EditStartPointButton" Grid.Column="2" Grid.Row="0" />
+                </Grid>
+                <BoxView HeightRequest="1" BackgroundColor="Accent" Opacity="0.8"/>
+                <Label Text="Конечная точка ИССО" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Margin="10, 0, 10, 5" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="5*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="GeoEndPointImage" WidthRequest="40" HeightRequest="40" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0" />
+                    <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="1">
+                        <Label x:Name="EndLatitude" HorizontalOptions="Fill" HorizontalTextAlignment="Center" />
+                        <Label x:Name="EndLongitude" HorizontalOptions="Fill" HorizontalTextAlignment="Center" />
+                    </StackLayout>
+                    <Button x:Name="EditEndPointButton" Grid.Column="2" Grid.Row="0"/>
+                </Grid>
+                <BoxView HeightRequest="1" BackgroundColor="Accent" Opacity="0.8"/>
+                <Label Text="Текущее положение" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Margin="10, 0, 10, 5" />
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                  </Grid.ColumnDefinitions>
+                  <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                  </Grid.RowDefinitions>
+                  <Label Text="Длина ИССО:" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start" />
+                  <Label x:Name="CurrentISSOLength" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="1"/>
+                  <Label Text="Погрешность:" Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Start"/>
+                  <StackLayout Orientation="Horizontal" Grid.Row="1" Grid.Column="1" >
+                    <Label x:Name="CurrentErrorLbl" HorizontalTextAlignment="Start"/>
+                    <Image x:Name="WarningImg" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="30" HeightRequest="30" />
+                  </StackLayout>
+                </Grid>
+              <Grid>
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*" />
+                  <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="0" Style="{StaticResource ButtonStandardCancel}" Text="Отмена" x:Name="CancelBtn" Clicked="CancelBtn_Clicked"/>
+                <Button Grid.Row="0" Grid.Column="1" Style="{StaticResource ButtonStandard}" Text="Сохранить" x:Name="ConfirmBtn" Clicked="ConfirmBtn_Clicked"/>
+              </Grid>
+            </StackLayout>
+        </Grid>
+    </backhandlers:MyBackHandleContentPage.Content>
+</backhandlers:MyBackHandleContentPage>

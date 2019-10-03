@@ -1,0 +1,21 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_marginTop="@dimen/abc_action_bar_default_height_material">
+
+    <PreferenceCategory
+        android:key="category"
+        android:title="Синхронизация данных">
+        <com.development.aisisso.isso_i.CustomListPreference
+            android:defaultValue="0"
+            android:key="listPref"/>
+        <CheckBoxPreference
+            android:key="AllowToDownloadPhotos"
+            android:title="Загрузка фотографий с сервера"
+            android:summary="(Не рекомендуется без подключения к wi-fi)"
+            android:defaultValue="true" />
+        <CheckBoxPreference
+            android:key="AllowToDownloadSchemes"
+            android:title="Загрузка чертежей с сервера"
+            android:summary="(Не рекомендуется без подключения к wi-fi)"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

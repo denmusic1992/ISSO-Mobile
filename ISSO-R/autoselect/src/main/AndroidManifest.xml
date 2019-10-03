@@ -1,0 +1,30 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.development.aisisso.autoselect">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="22" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="22" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <application android:allowBackup="true" android:label="@string/app_name"
+                 android:icon="@mipmap/ic_launcher" android:supportsRtl="true"
+                 android:theme="@style/AppTheme">
+        <activity
+            android:name=".Autoselect"
+            android:label="@string/title_activity_autoselect"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Advanced">
+        </activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDEBKksorvmFkFzGvew_5hWJajmSGH96u4"/>
+    </application>
+
+</manifest>

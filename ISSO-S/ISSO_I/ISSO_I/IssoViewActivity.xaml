@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:contentpages="clr-namespace:ISSO_I.IssoViewPages"
+            x:Class="ISSO_I.IssoViewActivity">
+  <!--Pages can be added as references or inline-->
+    <contentpages:TreeContentPage Title="Дерево" x:Name="tree_content"/>
+
+    <contentpages:DefectContentPage Title="Дефекты" x:Name="defect_content"/>
+
+    <contentpages:PhotoContentPage Title="Фото" x:Name="photo_content" />
+
+    <contentpages:PdfContentPage Title="Схемы" x:Name="pdf_content" />
+    
+</TabbedPage>

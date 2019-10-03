@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<backHandlers:MyBackHandleContentPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:CommonClassesLibrary.Converters;assembly=CommonClassesLibrary"
+             xmlns:backHandlers="clr-namespace:CommonClassesLibrary.BackHandlers;assembly=CommonClassesLibrary"
+             x:Class="ISSO_I.IssoViewPages.ForDefectTable.AddIssoDefectContentPageList">
+    <backHandlers:MyBackHandleContentPage.Resources>
+        <ResourceDictionary>
+            <converters:TextColorConverter x:Key="TextColorConverter"/>
+        </ResourceDictionary>
+    </backHandlers:MyBackHandleContentPage.Resources>
+    <backHandlers:MyBackHandleContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" Priority="0" Icon="elements_tree.png" Clicked="ChangeDefectView_Clicked" x:Name="ChangeDefectView" />
+    </backHandlers:MyBackHandleContentPage.ToolbarItems>
+    <backHandlers:MyBackHandleContentPage.Content>
+        <StackLayout>
+            <Label x:Name="TreeNodeLevelLabel" Margin="10, 10, 10, 0" Style="{StaticResource LabelSmall}" />
+            <!--Список дефектов-->
+            <ListView x:Name="Defect_list" HasUnevenRows="True" SeparatorColor="Accent"
+                      CachingStrategy="RecycleElement" ItemTapped="ListViewItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <!--Наименование конструктивов-->
+                                <Label Text="{Binding NGrConstr}" Style="{StaticResource LabelSmall}" VerticalOptions="FillAndExpand"
+                                       HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" Margin="10"
+                                       TextColor="{Binding IsDefectLeaf, Converter={StaticResource TextColorConverter}}" />
+                                <!--Показатель того, что это не лист-->
+                                <ImageButton Source="cell_arrow_right.png" IsVisible="{Binding IsNotLeaf}"
+                                             HorizontalOptions="Start" VerticalOptions="Center"
+                                             WidthRequest="40" HeightRequest="40" Aspect="AspectFit"
+                                             Clicked="ImageButton_Clicked" Margin="0, 0, 15, 0"
+                                             BackgroundColor="Transparent" BorderColor="Accent" 
+                                             BorderWidth="0.7" Scale="0.9" CornerRadius="5" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </backHandlers:MyBackHandleContentPage.Content>
+</backHandlers:MyBackHandleContentPage>

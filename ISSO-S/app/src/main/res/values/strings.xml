@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">АИС ИССО-S</string>
+    <string name="app_summary">Формирование оценки текущей ситуации ИССО</string>
+    <string name="all_roads">[Все]</string>
+    <string name="title_activity_isso_view">IssoViewActivity</string>
+
+    <string name="title_activity_autoselect">АИС ИССО-S. Автовыбор</string>
+    <string name="title_activity_synchronize">АИС ИССО-S. Синхронизация</string>
+    <string name="title_activity_settings">АИС ИССО-S. Настройки</string>
+    <string name="title_activity_issoView">АИС ИССО-S. Рейтинг</string>
+    <string name="title_activity_add_rating">АИС ИССО-S. Добавление оценки</string>
+    <string name="autoSelect">Автовыбор</string>
+    <string name="synchronize">Синхронизация</string>
+    <string name="settings">Настройки</string>
+    <string name="darkTheme">Темная</string>
+    <string name="lightTheme">Светлая</string>
+    <string name="LocalAddress">aisisso.ru</string>
+    <string name="GlobalAddress">10.242.52.146</string>
+    <string name="ExternalAddress">ais.russianhighways.ru</string>
+    <string name="port">8789</string>
+    <string name="defaultTheme">0</string>
+    <string name="receiveCoords">Получение координат…</string>
+    <string name="chooseRating">Оценка текущей ситуации:</string>
+    <string name="advancedChooseRating">Степень улучшения:</string>
+    <string name="commentRating">[комментарий отсутствует]</string>
+    <string name="confirm">Подтвердить</string>
+    <string name="saveRow">Сохранить</string>
+    <string name="editRow">Редактировать</string>
+    <string name="historyRemWorks">Введенные ранее оценки</string>
+    <string name="newRemWorks">Создание новой оценки работ</string>
+    <string-array name="auto_values">
+        <item>Только список</item>
+        <item>Карта и список</item>
+        <item>Только карта</item>
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_new_maps">Map</string>
+</resources>

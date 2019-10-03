@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<backhandlers:MyBackHandleContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CommonClassesLibrary.CustomRenderers"
+             xmlns:backhandlers="clr-namespace:CommonClassesLibrary.BackHandlers"
+             x:Class="CommonClassesLibrary.SettingsActivity">
+    <backhandlers:MyBackHandleContentPage.Content>
+        <TableView Intent="Settings">
+            <TableRoot>
+                <TableSection Title="Общие настройки">
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Адрес сервера" VerticalTextAlignment="Center" Margin="20, 0, 10, 0">
+                                <Label.FontSize>
+                                    <OnPlatform x:TypeArguments="x:Double"
+                                        iOS="14"
+                                        Android="14" />
+                                </Label.FontSize>
+                            </Label>
+                            <local:NoHelperEntry Placeholder="Введите адрес" Keyboard="Chat" x:Name="EntryAddress" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                <local:NoHelperEntry.Keyboard>
+                                    <Keyboard x:FactoryMethod="Create">
+                                        <x:Arguments>
+                                            <KeyboardFlags>None</KeyboardFlags>
+                                        </x:Arguments>
+                                    </Keyboard>
+                                </local:NoHelperEntry.Keyboard>
+                            </local:NoHelperEntry>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Порт сервера" VerticalTextAlignment="Center" Margin="20, 0, 10, 0">
+                                <Label.FontSize>
+                                    <OnPlatform x:TypeArguments="x:Double"
+                                        iOS="14"
+                                        Android="14" />
+                                </Label.FontSize>
+                            </Label>
+                            <local:NoHelperEntry Placeholder="Введите порт" Keyboard="Numeric" x:Name="EntryPort" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Порт службы поддержки" VerticalTextAlignment="Center" LineBreakMode="TailTruncation" Margin="20, 0, 10, 0">
+                                <Label.FontSize>
+                                    <OnPlatform x:TypeArguments="x:Double"
+                                        iOS="14"
+                                        Android="14" />
+                                </Label.FontSize>
+                            </Label>
+                            <local:NoHelperEntry Placeholder="Введите порт" Keyboard="Numeric" x:Name="EntrySupport" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <!--<EntryCell Label="Адрес сервера:" Placeholder="Введите адрес:" Keyboard="Chat" />
+                    <EntryCell Label="Порт сервера:" Placeholder="Введите порт:" Keyboard="Numeric" />
+                    <EntryCell Label="Порт службы поддержки:" Placeholder="Введите порт:" Keyboard="Numeric"/>-->
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </backhandlers:MyBackHandleContentPage.Content>
+</backhandlers:MyBackHandleContentPage>

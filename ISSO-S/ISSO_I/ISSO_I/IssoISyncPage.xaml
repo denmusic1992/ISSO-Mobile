@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"                 
+             xmlns:local="clr-namespace:ISSO_I.CustomRenderes"
+             x:Class="ISSO_I.IssoISyncPage"
+             Title="Синхронизация. Выгрузки">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="20, 0, 20, 0">
+            <TableView Intent="Menu" VerticalOptions="Start" HorizontalOptions="FillAndExpand" HasUnevenRows="True">
+                <TableRoot Title="Синхронизация данных">
+                    <TableSection Title="Выбор выгрузки">
+                        <ViewCell>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="5*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <local:MyPicker x:Name="Picker_Collections" Grid.Row="0" Grid.Column="0" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Start"/>
+                                    <Button WidthRequest="80" HeightRequest="80" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.Column="1"
+                                    x:Name="Btn_MoreInfo" Clicked="Btn_MoreInfo_Clicked"/>
+                                </Grid>
+                                <Label Text="Доп. информация по выгрузке:" VerticalOptions="Center" HorizontalOptions="Start"/>
+                                <Label x:Name="Advanced_Info_Label" HorizontalOptions="Start" VerticalOptions="Center" TextColor="Black" />
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                    <TableSection Title="Доп. настройки">
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="5*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0" Grid.Row="0">
+                                    <Label FontSize="Default" Text="Загрузка фотографий с сервера" />
+                                    <Label FontSize="Small" Text="(Не рекомендуется без подключения к wi-fi)" />
+                                </StackLayout>
+                                <Switch Grid.Column="1" Grid.Row="0" x:Name="SwitchPhoto" VerticalOptions="Center" HorizontalOptions="Center"/>
+                            </Grid>
+                        </ViewCell>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="5*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0" Grid.Row="0">
+                                    <Label FontSize="Default" Text="Загрузка схем с сервера" />
+                                    <Label FontSize="Small" Text="(Не рекомендуется без подключения к wi-fi)" />
+                                </StackLayout>
+                                <Switch Grid.Column="1" Grid.Row="0" x:Name="SwitchScheme" VerticalOptions="Center" HorizontalOptions="Center"/>
+                            </Grid>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            <Button x:Name="SyncButton" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Text="Синхронизация" Clicked="SyncButton_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<backHandlers:MyBackHandleContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:backHandlers="clr-namespace:CommonClassesLibrary.BackHandlers;assembly=CommonClassesLibrary"
+             x:Class="ISSO_I.IssoViewPages.AdvancedDefectInfoPage" >
+    <backHandlers:MyBackHandleContentPage.Content>
+        <StackLayout VerticalOptions="Fill" HorizontalOptions="Fill">
+            <StackLayout Margin="20, 20, 20, 0" VerticalOptions="Center" HorizontalOptions="Center">
+                <Label Text="Общая информация:" FontSize="Small"/>
+                <!--Таблица для отображения степени раскрытия дефекта-->
+                <StackLayout VerticalOptions="Start" HorizontalOptions="Start" Margin="0">
+                    <Grid Padding="1" RowSpacing="1" ColumnSpacing="1" Margin="0" x:Name="grid_def_view">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </StackLayout>
+                <!--<ListView x:Name="lv_def_items" HasUnevenRows="True" VerticalOptions="Fill" HorizontalOptions="Fill" SeparatorColor="#55104e8b">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="1" RowSpacing="1" ColumnSpacing="1" Margin="0, 5, 0, 5" >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*" />
+                                        <ColumnDefinition Width="1*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Label Text="{Binding Info}" VerticalOptions="Fill" HorizontalOptions="Fill" 
+                                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="0"/>
+                                    <Label Text="{Binding BDRG}" VerticalOptions="Fill" HorizontalOptions="Fill" 
+                                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="1" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>-->
+                <BoxView HeightRequest="1" BackgroundColor="Accent" Opacity="0.8" Margin="0, 0, 0, 3" />
+            </StackLayout>
+            <!--Доп информация с фотографями (если есть)-->
+            <ScrollView Orientation="Vertical" HorizontalOptions="Fill" VerticalOptions="Fill">
+                <StackLayout>
+                    <StackLayout Margin="20, 1, 20, 1">
+                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Дополнительные характеристики дефекта:" FontSize="Small"/>
+                        <Grid HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Black" RowSpacing="1" Padding="1" ColumnSpacing="1" x:Name="grid_adv_char_def">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="3*" />
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Column="0" Grid.Row="0" BackgroundColor="White" Padding="5" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Локализация:" FontSize="Small" 
+                                       VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
+                            </StackLayout>
+                            <StackLayout Grid.Column="1" Grid.Row="0" BackgroundColor="White" Padding="5" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" x:Name="localization_label" FontSize="Small" 
+                                       VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
+                            </StackLayout>
+                            <StackLayout Grid.Column="0" Grid.Row="1" BackgroundColor="White" Padding="5" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Дополнительная информация:" FontSize="Small" 
+                                       VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
+                            </StackLayout>
+                            <StackLayout  Grid.Column="1" Grid.Row="1" BackgroundColor="White" Padding="5" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" x:Name="advanced_info_label" FontSize="Small" 
+                                       VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
+                            </StackLayout>
+                        </Grid>
+                        <BoxView HeightRequest="1" BackgroundColor="Accent" Opacity="0.8" Margin="0, 3, 0, 3"/>
+                    </StackLayout>
+                    <StackLayout Margin="20, 1, 20, 1">
+                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Характеристика дефекта по ремонтопригодности:" FontSize="Small"/>
+                        <Grid VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="Black" RowSpacing="1" Padding="1" ColumnSpacing="1" x:Name="grid_rem_char_def" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="3*" />
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Column="0" Grid.Row="0" BackgroundColor="White" Padding="5" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="Прямая ремонтная работа:" FontSize="Small" 
+                                       VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
+                            </StackLayout>
+                            <StackLayout Grid.Column="1" Grid.Row="0" BackgroundColor="White" Padding="5" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" x:Name="rem_work_label" FontSize="Small" 
+                                       VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
+                            </StackLayout>
+                            <StackLayout Grid.Column="0" Grid.Row="1" BackgroundColor="White" Padding="5" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" x:Name="name_rem_volume_label" Text="Объем ремонтной работы:" 
+                                       FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
+                            </StackLayout>
+                            <StackLayout Grid.Column="1" Grid.Row="1" BackgroundColor="White" Padding="5" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                <Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" x:Name="rem_volume_label" FontSize="Small" 
+                                       VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
+                            </StackLayout>
+                        </Grid>
+                        <BoxView HeightRequest="1" BackgroundColor="Accent" Opacity="0.8" Margin="0, 3, 0, 3"/>
+                    </StackLayout>
+                    <StackLayout Margin="20, 1, 20, 1">
+                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Фотография дефекта" FontSize="Small"/>
+                        <ffimageloading:CachedImage x:Name="photo_def_img" Margin="0, 0, 0, 10" Aspect="AspectFit" >
+                            <ffimageloading:CachedImage.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                            </ffimageloading:CachedImage.GestureRecognizers>
+                        </ffimageloading:CachedImage>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </backHandlers:MyBackHandleContentPage.Content>
+</backHandlers:MyBackHandleContentPage>

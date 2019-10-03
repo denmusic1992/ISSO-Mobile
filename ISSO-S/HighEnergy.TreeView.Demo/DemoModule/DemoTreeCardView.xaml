@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:converters="clr-namespace:CommonClassesLibrary.Converters;assembly=CommonClassesLibrary"
+	x:Class="HighEnergy.TreeView.Demo.DemoModule.DemoTreeCardView">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <converters:BorderColorConverter x:Key="BorderColorConverter"/>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <!--<BoxView HorizontalOptions="Fill" BackgroundColor="Accent" Opacity="0.8" HeightRequest="1" IsVisible="{Binding IsNotLeaf}"/>-->
+            <StackLayout Orientation="Horizontal" VerticalOptions="Fill" HorizontalOptions="FillAndExpand">
+                <BoxView x:Name="Spacer" WidthRequest="{Binding IndentWidth}" VerticalOptions="Center"/>
+                <!--				<Image Source="{local:ImageResource CubesBrightColors.png}" Aspect="AspectFit" WidthRequest="24" VerticalOptions="Center"/>-->
+
+                <Button VerticalOptions="Center" HorizontalOptions="Center" Command="{Binding ToggleIsExpandedCommand}"
+                        IsVisible="{Binding IsNotLeaf}" Image="{Binding ImageExpand}" WidthRequest="40"
+                        HeightRequest="40" BackgroundColor="Transparent" />
+                <Frame BorderColor="{Binding IsHeader, Converter={StaticResource BorderColorConverter}}" Padding="5"
+                       CornerRadius="5" HorizontalOptions="FillAndExpand" Margin="0, 0, 10, 0" BackgroundColor="Transparent">
+                    <Label x:Name="TitleLabel" Text="{Binding Description}" Style="{StaticResource LabelSmall}" HorizontalOptions="Fill"
+                           VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                </Frame>
+                    <!--<Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GoToTableContent}" CommandParameter="{Binding .}"/>
+                    </Label.GestureRecognizers>-->
+            </StackLayout>
+            <!--<BoxView HorizontalOptions="Fill" BackgroundColor="Accent" Opacity="0.8" HeightRequest="1" IsVisible="{Binding IsNotLeaf}" />-->
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding GoToTableContent}" CommandParameter="{Binding .}"/>
+            </StackLayout.GestureRecognizers>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

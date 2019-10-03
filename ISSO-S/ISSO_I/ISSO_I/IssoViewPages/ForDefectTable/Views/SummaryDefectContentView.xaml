@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ISSO_I.IssoViewPages.ForDefectTable.Views.SummaryDefectContentView">
+    <ContentView.Content>
+        <ScrollView Margin="0, 0, 0, 30">
+            <StackLayout>
+                <Label Text="Выбранные данные дефекта:" Style="{StaticResource LabelStandard}" HorizontalOptions="Fill"
+                 HorizontalTextAlignment="Center" Margin="10" />
+                <Frame BorderColor="Accent" Padding="5" CornerRadius="5" HorizontalOptions="FillAndExpand" Margin="10"
+                 BackgroundColor="Transparent" IsVisible="{Binding HasQualParams}">
+                    <StackLayout>
+                        <Label Text="Выбранный качественный параметр:" Style="{StaticResource LabelSmall}" />
+                        <Label Style="{StaticResource LabelStandard}" Margin="10" Text="{Binding ChosenQualityParam}" />
+                    </StackLayout>
+                </Frame>
+                <Frame BorderColor="Accent" Padding="5" CornerRadius="5" HorizontalOptions="FillAndExpand" Margin="10"
+                 BackgroundColor="Transparent" IsVisible="{Binding HasQuanParams}">
+                    <StackLayout>
+                        <Label Text="Выбранный количественный параметр:" Style="{StaticResource LabelSmall}" />
+                        <Label Style="{StaticResource LabelStandard}" Margin="10" Text="{Binding ChosenQuantityParam}" />
+                    </StackLayout>
+                </Frame>
+                <Frame BorderColor="Accent" Padding="5" CornerRadius="5" HorizontalOptions="FillAndExpand" Margin="10"
+                 BackgroundColor="Transparent" IsVisible="{Binding HasBothParams}">
+                    <StackLayout>
+                        <Label Text="Итоговые значения дефекта по БДРГ:" Style="{StaticResource LabelSmall}" />
+                        <Label Style="{StaticResource LabelStandard}" Margin="10" Text="{Binding SummaryDefectParam}" />
+                    </StackLayout>
+                </Frame>
+                <Frame BorderColor="Accent" Padding="5" CornerRadius="5" HorizontalOptions="FillAndExpand" Margin="10"
+                 BackgroundColor="Transparent">
+                    <StackLayout>
+                        <Label Text="Дополнительная информация:" Style="{StaticResource LabelSmall}" />
+                        <Label Text="Локализация:" Style="{StaticResource LabelSmall}" />
+                        <Label Style="{StaticResource LabelStandard}" Margin="10" Text="{Binding ChosenLocalization}" />
+                        <Label Text="Дополнительная информация:" Style="{StaticResource LabelSmall}" />
+                        <Label Style="{StaticResource LabelStandard}" Margin="10" Text="{Binding ChosenAdvancedInfo}" />
+                        <Label Text="{Binding PhotoAdded}" Margin="10" Style="{StaticResource LabelStandard}"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BorderColor="Accent" Padding="5" CornerRadius="5" HorizontalOptions="FillAndExpand" Margin="10"
+                       BackgroundColor="Transparent">
+                    <StackLayout>
+                        <Label Text="Дата вводимого дефекта:" Style="{StaticResource LabelSmall}" />
+                        <Label Style="{StaticResource LabelStandard}" Margin="10" Text="{Binding ChosenDate}" />
+                        <Label Text="Выбранныe конструкции:" Style="{StaticResource LabelSmall}" IsVisible="{Binding IsForConstrs}"/>
+                        <Label Style="{StaticResource LabelStandard}" Margin="10" Text="{Binding ChosenConstr}" IsVisible="{Binding IsForConstrs}"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentView.Content>
+</ContentView>

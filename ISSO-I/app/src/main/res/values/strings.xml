@@ -1,0 +1,43 @@
+<resources>
+    <string name="name_app">АИС ИССО-I</string>
+    <string name="all_roads">[Все]</string>
+    <string name="title_activity_isso_view">IssoViewActivity</string>
+    <string name="app_summary">Мобильная версия АБДМ для просмотра наборов ИССО</string>
+    <string name="title_activity_autoselect">АИС ИССО-I. Автовыбор</string>
+    <string name="title_activity_synchronize">АИС ИССО-I. Синхронизация</string>
+    <string name="title_activity_create">АИС ИССО-I. Создание записи</string>
+    <string name="title_activity_preview">АИС ИССО-I. Просмотр записи</string>
+    <string name="title_activity_edit">АИС ИССО-I. Редактирование записи</string>
+    <string name="title_activity_settings">АИС ИССО-I. Настройки</string>
+    <string name="title_activity_download">АИС ИССО-I. Загрузка данных</string>
+    <string name="title_activity_issoView">АИС ИССО-I. Рейтинг</string>
+    <string name="autoSelect">Автовыбор</string>
+    <string name="synchronize">Синхронизация</string>
+    <string name="synchronize_photo">Синхронизация фото</string>
+    <string name="synchronize_scheme">Синхронизация схем</string>
+    <string name="settings">Настройки</string>
+    <string name="darkTheme">Темная</string>
+    <string name="lightTheme">Светлая</string>
+    <string name="LocalAddress">aisisso.ru</string>
+    <string name="GlobalAddress">10.242.52.146</string>
+    <string name="port">8789</string>
+    <string name="defaultTheme">0</string>
+    <string name="receiveCoords">Получение координат…</string>
+    <string name="chooseRating">Оценка текущей ситуации:</string>
+    <string name="advancedChooseRating">Степень улучшения:</string>
+    <string name="commentRating">Комментарий к оценке:</string>
+    <string name="confirm">Подтвердить</string>
+    <string name="saveRow">Сохранить</string>
+    <string name="editRow">Редактировать</string>
+    <string name="historyRemWorks">Введенные ранее оценки</string>
+    <string name="newRemWorks">Создание новой оценки работ</string>
+    <string name="tree_view">Дерево данных по сооружению</string>
+    <string name="photo_view">Фото по сооружению</string>
+    <string name="scheme_view">Схемы по сооружению</string>
+    <string-array name="auto_values">
+        <item>Только список</item>
+        <item>Карта и список</item>
+        <item>Только карта</item>
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+</resources>

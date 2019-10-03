@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<backHandlers:MyBackHandleContentPage  xmlns="http://xamarin.com/schemas/2014/forms"
+                                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                                       xmlns:carousel="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+                                       xmlns:backHandlers="clr-namespace:CommonClassesLibrary.BackHandlers;assembly=CommonClassesLibrary"
+                                       x:Class="ISSO_I.IssoViewPages.ForDefectTable.CreateDefectContentPage">
+    <backHandlers:MyBackHandleContentPage.Content>
+        <StackLayout>
+            <carousel:CarouselViewControl Orientation="Horizontal" InterPageSpacing="100" 
+                                          VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+                                          IndicatorsShape="Circle" ShowIndicators="True"
+                                          CurrentPageIndicatorTintColor="Accent"
+                                          ShowArrows="False" IsSwipeEnabled="False"
+                                          x:Name="CarouselView"
+                                          ItemsSource="{Binding MyItemsSource}">
+            </carousel:CarouselViewControl>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Style="{StaticResource ButtonStandardTransparent}" x:Name="ButtonBack"
+                        Clicked="ButtonBack_OnClicked" Text="Назад" IsVisible="False" />
+                <Button Grid.Column="1" Style="{StaticResource ButtonStandardCancel}" x:Name="ButtonForward"
+                        Clicked="ButtonForward_OnClicked" Text="Далее" />
+            </Grid>
+        </StackLayout>
+    </backHandlers:MyBackHandleContentPage.Content>
+</backHandlers:MyBackHandleContentPage>

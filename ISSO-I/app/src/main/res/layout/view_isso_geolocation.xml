@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:id="@+id/linLayoutGeoMain"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="0dip"
+            android:layout_weight="6"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:id="@+id/tvMainInfoGeolocation"/>
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="wrap_content"
+                android:adjustViewBounds="true"
+                android:id="@+id/btn_closeGeolocation"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <fragment android:layout_width="match_parent"
+              android:layout_margin="5dp"
+              android:layout_height="wrap_content"
+              android:id="@+id/fragment_layout"
+              tools:context="com.development.aisisso.isso_r.ViewIssoGeolocation"
+              android:name="com.google.android.gms.maps.SupportMapFragment" />
+</LinearLayout>

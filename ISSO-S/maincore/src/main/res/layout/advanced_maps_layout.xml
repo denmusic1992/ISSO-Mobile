@@ -1,0 +1,22 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linLayoutMaps">
+
+    <ru.yandex.yandexmapkit.MapView
+        android:id="@+id/mapViewAdvanced"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:apiKey="Uq6Dxokwr1Z-YW~vnhDMA5ZG8nTzqpVi9SjeLk458bSrOiOSNnHOW6Akdz4DPM5~NIfKJ7St3CZFQ66gp2VzEUi0RZJhnhDkYXJbYFPTk9g=">
+        <ImageButton
+            android:id="@+id/btnAdvancedFollow"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="fitCenter"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true" />
+    </ru.yandex.yandexmapkit.MapView>
+</LinearLayout>

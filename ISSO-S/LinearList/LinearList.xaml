@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<handlers:MyBackHandleContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:handlers="clr-namespace:CommonClassesLibrary.BackHandlers;assembly=CommonClassesLibrary"
+    x:Class="LinearList.LinearList" Appearing="ContentPage_Appearing">
+    <handlers:MyBackHandleContentPage.ToolbarItems>
+        <ToolbarItem x:Name="FilterBarItem" Text="Фильтр по дороге" Icon="filter_dark.png" Clicked="Filter_Clicked" x:FieldModifier="public"/>
+    </handlers:MyBackHandleContentPage.ToolbarItems>
+    <handlers:MyBackHandleContentPage.Content>
+        <StackLayout>
+            <Label VerticalOptions="FillAndExpand" HorizontalTextAlignment="Center" x:Name="NoIssos" Margin="10, 40, 10 ,40" Text="Нет ИССО для отображения. Проведите синхронизацию." />
+            <SearchBar x:Name="searchIssoFilter" Placeholder="Поиск ИССО" TextChanged="searchIssoFilter_TextChanged" />
+            <ListView x:Name="issoList" HasUnevenRows="True" VerticalOptions="FillAndExpand" SeparatorColor="Accent" CachingStrategy="RecycleElement">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="7*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Image Source="{Binding Img}" Grid.Column="0" Margin="10" VerticalOptions="Center" 
+                                   HorizontalOptions="Center" Aspect="AspectFit" WidthRequest="35" HeightRequest="35" />
+                                <Label Text="{Binding Description}" LineBreakMode="WordWrap" Grid.Column="1"
+                                       VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Style="{StaticResource LabelSmall}"
+                                       HorizontalTextAlignment="Start" VerticalTextAlignment="Center">
+                                </Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+           </StackLayout>
+    </handlers:MyBackHandleContentPage.Content>
+</handlers:MyBackHandleContentPage>

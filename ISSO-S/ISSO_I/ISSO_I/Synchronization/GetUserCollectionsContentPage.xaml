@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<backHandlers:MyBackHandleContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                                      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                                      xmlns:backHandlers="clr-namespace:CommonClassesLibrary.BackHandlers;assembly=CommonClassesLibrary"
+                                      x:Class="ISSO_I.GetUserCollectionsContentPage">
+    <backHandlers:MyBackHandleContentPage.Content>
+        <ListView x:Name="lvGetCollections" ItemTapped="lvGetCollections_ItemTapped" HasUnevenRows="True" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="6*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                                <Grid VerticalOptions="Center" HorizontalOptions="Fill" Grid.Row="0" Grid.Column="0" Margin="10, 0, 10, 0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="1"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="1"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="1"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="1"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="Описание:" HorizontalOptions="Start" VerticalOptions="Center" Grid.Column="0" Grid.Row="0"/>
+                                    <Label x:Name="Name" Text="{Binding Name}" FontSize="Small" HorizontalOptions="Fill" VerticalOptions="Center" 
+                                           HorizontalTextAlignment="Start" VerticalTextAlignment="Center" TextColor="Black" Grid.Column="1" Grid.Row="0"/>
+                                    
+                                    <BoxView HeightRequest="1" BackgroundColor="Accent" Opacity="0.8" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"/>
+                                    
+                                    <Label Text="Подробно:" HorizontalOptions="Start" VerticalOptions="Center" Grid.Column="0" Grid.Row="2"/>
+                                    <Label x:Name="Description" Text="{Binding Description}" FontSize="Small" HorizontalOptions="Fill" VerticalOptions="Center" 
+                                           HorizontalTextAlignment="Start" VerticalTextAlignment="Center" TextColor="Black" Grid.Column="1" Grid.Row="2"/>
+
+                                    <BoxView HeightRequest="1" BackgroundColor="Accent" Opacity="0.8" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2"/>
+
+                                    <Label Text="Дата создания:" HorizontalOptions="Start" VerticalOptions="Center" Grid.Column="0" Grid.Row="4"/>
+                                    <Label x:Name="DateCreate" Text="{Binding DateCreate}"  FontSize="Small" HorizontalOptions="Fill" VerticalOptions="Center" 
+                                           HorizontalTextAlignment="Start" VerticalTextAlignment="Center" TextColor="Black" Grid.Column="1" Grid.Row="4"/>
+
+                                    <BoxView HeightRequest="1" BackgroundColor="Accent" Opacity="0.8" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2"/>
+
+                                    <Label Text="Дата изменения:" HorizontalOptions="Start" VerticalOptions="Center" Grid.Column="0" Grid.Row="6"/>
+                                    <Label x:Name="DateModify" Text="{Binding DateModify}" FontSize="Small" HorizontalOptions="Fill" VerticalOptions="Center" 
+                                           HorizontalTextAlignment="Start" VerticalTextAlignment="Center" TextColor="Black" Grid.Column="1" Grid.Row="6"/>
+
+                                    <BoxView HeightRequest="1" BackgroundColor="Accent" Opacity="0.8" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2"/>
+
+                                    <Label Text="Количество ИССО:" HorizontalOptions="Start" VerticalOptions="Center" Grid.Column="0" Grid.Row="8"/>
+                                    <Label x:Name="ISSO_Count" Text="{Binding IssoCount}" FontSize="Small" HorizontalOptions="Fill" VerticalOptions="Center" 
+                                           HorizontalTextAlignment="Start" VerticalTextAlignment="Center" TextColor="Black" Grid.Column="1" Grid.Row="8"/>
+                                </Grid>
+                            <Image Grid.Row="0" Grid.Column="1" WidthRequest="20" HeightRequest="20" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="{Binding IsChecked}">
+                                <Image.Source>
+                                    <OnPlatform x:TypeArguments="ImageSource">
+                                        <OnPlatform.iOS>
+                                            <FileImageSource File="Icons/checkmark.png"/>
+                                        </OnPlatform.iOS>
+                                        <OnPlatform.Android>
+                                            <FileImageSource File="checkmark.png"/>
+                                        </OnPlatform.Android>
+                                    </OnPlatform>
+                                </Image.Source>
+                            </Image>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </backHandlers:MyBackHandleContentPage.Content>
+</backHandlers:MyBackHandleContentPage>

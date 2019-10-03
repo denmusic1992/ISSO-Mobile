@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:id="@+id/linLayoutSynchronize"
+              android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Синхронизация данных"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/clickableLayoutForList"
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:id="@+id/tv_mainInfoAboutIsso"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/tv_advancedInfoAboutIsso"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnMoreInfo"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:layout_marginRight="15dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </RelativeLayout>
+    <View
+        android:background="#888"
+        android:layout_width="match_parent"
+        android:layout_height="1dip" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dip"
+            android:id="@+id/layoutPhoto"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"
+                android:text="Загрузка фотографий с сервера"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginRight="10dp"
+                android:singleLine="false"
+                android:minLines="2"
+                android:text="(Не рекомендуется без подключения к wi-fi)"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <CheckBox
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dip"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/chkAllowPhoto"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:background="#888"
+        android:layout_width="match_parent"
+        android:layout_height="1dip" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dip"
+            android:id="@+id/layoutScheme"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"
+                android:text="Загрузка фотографий с сервера"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginRight="10dp"
+                android:singleLine="false"
+                android:minLines="2"
+                android:text="(Не рекомендуется без подключения к wi-fi)"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <CheckBox
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:id="@+id/chkAllowScheme"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_sync"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Синхронизация" />
+
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:id="@+id/linLayoutCreateRow"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="4"
+        android:layout_gravity="center"
+        android:id="@+id/tvCreateNRem"/>
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/imgRating"
+        android:layout_width="0dip"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="0dip"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:id="@+id/imgComment"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:id="@+id/imgPhoto"/>
+    </LinearLayout>
+</LinearLayout>

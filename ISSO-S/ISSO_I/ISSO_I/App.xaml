@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             x:Class="ISSO_I.App">
+	<Application.Resources>
+
+		<!-- Application resource dictionary -->
+        <!--Стандартный текст Label -->
+        <Style x:Key="LabelStandard" TargetType="Label">
+            <Setter Property="FontSize" Value="Default"/>
+            <Setter Property="Margin" Value="10, 0, 10, 0" />
+            <Setter Property="TextColor" Value="Black"/>
+        </Style>
+	    <!--Маленький текст Label -->
+	    <Style x:Key="LabelSmall" TargetType="Label">
+	        <Setter Property="FontSize" Value="Small"/>
+	        <Setter Property="TextColor" Value="Black"/>
+	    </Style>
+	    <!--Маленький текст Label -->
+	    <Style x:Key="LabelSmallWithMargin" TargetType="Label">
+	        <Setter Property="FontSize" Value="Small"/>
+	        <Setter Property="TextColor" Value="Black"/>
+	        <Setter Property="Margin" Value="10, 5, 10, 5"/>
+	    </Style>
+	    <!--Стандартный текст Label белый -->
+        <Style x:Key="LabelStandardWhite" TargetType="Label">
+            <Setter Property="FontSize" Value="Default"/>
+            <Setter Property="TextColor" Value="White"/>
+        </Style>
+	    <!--Маленький текст Label белый -->
+	    <Style x:Key="LabelSmallWhite" TargetType="Label">
+	        <Setter Property="FontSize" Value="Small"/>
+	        <Setter Property="TextColor" Value="White"/>
+	    </Style>
+	    <!--Микро текст Label -->
+	    <Style x:Key="LabelMicro" TargetType="Label">
+	        <Setter Property="FontSize" Value="Micro"/>
+	        <Setter Property="TextColor" Value="Black"/>
+	    </Style>
+	    <!--Микро текст Label белый -->
+	    <Style x:Key="LabelMicroWhite" TargetType="Label">
+	        <Setter Property="FontSize" Value="Micro"/>
+	        <Setter Property="TextColor" Value="White"/>
+	    </Style>
+        <!--Текст в таблице-->
+	    <Style x:Key="LabelInTable" TargetType="Label">
+	        <Setter Property="FontSize" Value="12"/>
+	        <Setter Property="TextColor" Value="Black"/>
+	    </Style>
+	    <!--Стандартная кнопка-->
+        <Style x:Key="ButtonStandard" TargetType="Button">
+            <Setter Property="FontSize" Value="Small"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="BackgroundColor" Value="Accent"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="CornerRadius" Value="5" />
+        </Style>
+	    <!--Стандартная кнопка белая-->
+	    <Style x:Key="ButtonStandardWhite" TargetType="Button">
+	        <Setter Property="FontSize" Value="Small"/>
+	        <Setter Property="TextColor" Value="Black"/>
+	        <Setter Property="BackgroundColor" Value="White"/>
+	        <Setter Property="Margin" Value="10"/>
+	        <Setter Property="CornerRadius" Value="5" />
+	    </Style>
+        <!-- Стандартная кнопка прозрачная -->
+	    <Style x:Key="ButtonStandardTransparent" TargetType="Button">
+	        <Setter Property="FontSize" Value="Small"/>
+	        <Setter Property="TextColor" Value="Black"/>
+	        <Setter Property="BackgroundColor" Value="Transparent"/>
+	        <Setter Property="Margin" Value="10"/>
+	        <Setter Property="CornerRadius" Value="5" />
+	    </Style>
+	    <!--Стандартная кнопка отмены-->
+	    <Style x:Key="ButtonStandardCancel" TargetType="Button">
+	        <Setter Property="FontSize" Value="Small"/>
+	        <Setter Property="TextColor" Value="Black"/>
+	        <Setter Property="BackgroundColor" Value="LightGray"/>
+	        <Setter Property="Margin" Value="10"/>
+	        <Setter Property="CornerRadius" Value="5" />
+	    </Style>
+        
+        <!--DataTemplate для picker с выбором нескольких возможных вариантов-->
+        <DataTemplate x:Key="MultiselectPickerItem">
+            <StackLayout Orientation="Horizontal">
+                <controls:CheckBox Type="Check" Text="{Binding Body}" IsChecked="{Binding IsChecked}" />
+            </StackLayout>
+        </DataTemplate>
+	</Application.Resources>
+</Application>

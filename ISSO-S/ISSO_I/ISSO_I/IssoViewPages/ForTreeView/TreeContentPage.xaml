@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<backhandlers:MyBackHandleContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:backhandlers="clr-namespace:CommonClassesLibrary.BackHandlers;assembly=CommonClassesLibrary"
+    xmlns:local="clr-namespace:ISSO_I.IssoViewPages"
+    x:Class="ISSO_I.IssoViewPages.TreeContentPage">
+    <backhandlers:MyBackHandleContentPage.Content>
+        <local:TreeView x:Name="TreeView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+    </backhandlers:MyBackHandleContentPage.Content>
+</backhandlers:MyBackHandleContentPage>

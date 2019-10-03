@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingStart="20dp"
+    android:paddingRight="20dp"
+    android:paddingEnd="20dp"
+    android:id="@+id/linLayoutSetRating">
+    <TextView
+        android:padding="5dp"
+        android:id="@+id/tvChooseRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/chooseRating" />
+    <Spinner
+        android:padding="5dp"
+        android:id="@+id/ratingSpinner"
+        android:drawSelectorOnTop="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:padding="5dp"
+        android:id="@+id/tvAdvancedChooseRating"
+        android:animateLayoutChanges="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/advancedChooseRating" />
+    <SeekBar
+        android:padding="5dp"
+        android:animateLayoutChanges="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar" />
+
+    <TextView
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCommentRating"
+        android:text="@string/commentRating" />
+    <EditText
+        android:background="#18FFFFFF"
+        android:lines="5"
+        android:imeOptions="actionDone"
+        android:id="@+id/editTextCommentRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp" />
+</LinearLayout>

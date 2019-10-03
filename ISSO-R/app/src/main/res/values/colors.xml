@@ -1,0 +1,32 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="holo_primary">#4a4a4a</color>
+    <color name="holo_light_primary">#aeaeae</color>
+    <color name="primary_material_light">#b3b3b3</color>
+    <color name="statusBarColor">#a9a9a9</color>
+    <color name="windowBackground">#9d9c9c</color>
+    <color name="textAheadLight">#558B2F</color>
+    <color name="textAheadDark">#B2FF59</color>
+    <color name="textBehindLight">#1565C0</color>
+    <color name="textBehindDark">#90CAF9</color>
+    <color name="almostTransparent">#22000000</color>
+    <color name="TransparentLight">#60000000</color>
+    <color name="TransparentDark">#60FFFFFF</color>
+    <color name="orangeTextColor">#FF6500</color>
+    <color name="redTextColor">#FF0000</color>
+    <color name="veryRedTextColor">#CC0000</color>
+    <color name="greenTextColor">#32CD32</color>
+    <color name="tool_back">#222222</color>
+    <color name="window_back">#333333</color>
+    <color name="colorHighlight">#B6B6B6</color>
+    <color name="accent_material_dark">#b5b5b5</color>
+    <color name="accent_material_light">#4a4a4a</color>
+    <color name="secondary_text_material_dark">#60e0e0e0</color>
+    <color name="bright_foreground_material_dark">#ffffff</color>
+    <color name="black">#FF000000</color>
+    <color name="fabMenuLight">#FF4A4A4A</color>
+    <color name="fabMenuLightPressed">#66BBBBBB</color>
+    <color name="fabMenuDark">#FFB5B5B5</color>
+    <color name="fabMenuDarkPressed">#66BBBBBB</color>
+</resources>

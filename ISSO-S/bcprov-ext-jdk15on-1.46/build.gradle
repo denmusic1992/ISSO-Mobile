@@ -1,0 +1,2 @@
+configurations.create("default")
+artifacts.add("default", file('bcprov-ext-jdk15on-1.46.jar'))

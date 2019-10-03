@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                 xmlns:controls="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+                 x:Class="ISSO_I.PopupTypes.MultiselectListView"
+                 CloseWhenBackgroundIsClicked="True">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <Frame HorizontalOptions="Center"
+           VerticalOptions="Center"
+           CornerRadius="5"
+           Margin="40"
+           Padding="0">
+        <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="White">
+            <AbsoluteLayout HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="Accent">
+                <Label VerticalOptions="Fill" HorizontalOptions="Fill" HorizontalTextAlignment="Center" Margin="50, 0, 50, 0" 
+                       VerticalTextAlignment="Center" x:Name="HeaderName" Style="{StaticResource LabelSmallWhite}" AbsoluteLayout.LayoutBounds="0.5, 0.5, 1, 1"
+                       AbsoluteLayout.LayoutFlags="All" x:FieldModifier="public" />
+                <Button VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="25"
+                        HeightRequest="25" Clicked="ButtonCloseClicked" Image="close_button_black.png" Style="{StaticResource ButtonStandardWhite}"
+                        AbsoluteLayout.LayoutBounds="1, 0, 50, 50" AbsoluteLayout.LayoutFlags="PositionProportional" />
+            </AbsoluteLayout>
+            <StackLayout>
+                <ListView RowHeight="70" Margin="5" ItemsSource="{Binding Items}" CachingStrategy="RecycleElement" VerticalOptions="FillAndExpand">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <controls:CheckBox IsChecked="{Binding IsChecked}" LabelPosition="After" Margin="10"
+                                                               Type="Material" Text="{Binding Body}" TextColor="Black" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <BoxView Color="Accent" HeightRequest="1" />
+                <controls:CheckBox IsChecked="{Binding Path=AllChecked}" LabelPosition="After" Margin="10" Type="Material"
+                                           Text="(Выбрать все)" TextColor="Black" />
+                <Button Style="{StaticResource ButtonStandard}" Margin="10" Text="Применить" Clicked="ButtonConfirmClicked"/>
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+</pages:PopupPage>

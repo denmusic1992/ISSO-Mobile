@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/drawer_autoselect"
+        android:icon="@drawable/autoselect_dark"
+        android:title="@string/autoSelect"/>
+    <item
+        android:id="@+id/drawer_synchronize"
+        android:icon="@drawable/synchronize_dark"
+        android:title="@string/synchronize"/>
+    <item
+        android:id="@+id/drawer_settings"
+        android:icon="@drawable/settings_dark"
+        android:title="@string/settings"/>
+</menu>

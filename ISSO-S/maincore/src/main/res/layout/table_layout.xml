@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="25dp">
+        <TableRow
+            android:gravity="center"
+            android:padding="3dp"
+            android:layout_marginLeft="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trFar">
+            <TextView
+                android:gravity="left|center"
+                android:id="@+id/textViewFar"
+                android:layout_width="0dip"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:gravity="center"
+                android:id="@+id/textViewFarDistance"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+        <TableRow
+            android:gravity="center"
+            android:layout_marginLeft="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trNear"
+            android:padding="3dp">
+            <TextView
+                android:gravity="left|center"
+                android:id="@+id/textViewNear"
+                android:layout_width="0dip"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:gravity="center"
+                android:id="@+id/textViewNearDistance"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+
+        <TableRow
+            android:gravity="center"
+            android:layout_marginLeft="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trBehind"
+            android:padding="3dp">
+            <TextView
+                android:gravity="left|center"
+                android:id="@+id/textViewBehind"
+                android:layout_width="0dip"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:gravity="center"
+                android:id="@+id/textViewBehindDistance"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+    </TableLayout>
+</ScrollView>

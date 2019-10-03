@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<customRenderers:MyContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                               xmlns:customRenderers="clr-namespace:ISSO_S.Droid.CustomRenderers"
+                               xmlns:customRenderers3="clr-namespace:ISSO_S.iOS.CustomRenderers"
+                               x:Class="ISSO_S.AddNewRating"
+                               EnableBackButtonOverride="True">
+    <!--CurrentPageChanged="TabbedPage_CurrentPageChanged"-->
+    <!--Pages can be added as references or inline-->
+    <ContentPage Title="Параметры оценки" Icon="Icons/settings.png" >
+        <ContentPage.Content>
+            <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Label Margin="5" HorizontalOptions="Start" FontSize="14" VerticalOptions="Fill" Text="Оценка текущей ситуации:" />
+                <Grid Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="img_otc" Grid.Row="0" Grid.Column="0" Margin="10"/>
+                    <customRenderers3:MyPicker x:Name="pick_otc" Grid.Row="0" Grid.Column="1" TextColor="Black"/>
+                </Grid>
+                <Label x:Name="tvBetter" IsVisible="False" Margin="5" HorizontalOptions="Start" VerticalOptions="Fill" Text="Степень улучшения:" FontSize="14" />
+                <Slider Margin="30, 5, 30, 5" IsVisible="False" x:Name="SeekBar" VerticalOptions="Start" HorizontalOptions="FillAndExpand" ValueChanged="Slider_valueChanged" />
+                <BoxView HeightRequest="1" BackgroundColor="Accent" Opacity="0.8" />
+                <Label Margin="5" VerticalOptions="Fill" HorizontalOptions="Start" Text="Комментарий к оценке ситуации:" FontSize="14"/>
+                <customRenderers:CustomEntryNoUnderlineTopStart Margin="5" TextColor="Black" x:Name="Comments" VerticalOptions="FillAndExpand"
+                       HorizontalOptions="Fill" Text="" FontSize="14" TextChanged="Comments_TextChanged" Placeholder="[Комментарий отсутствует]"/>
+                <BoxView HeightRequest="1" BackgroundColor="Accent" Opacity="0.8" />
+                <Grid Margin="5" HorizontalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" 
+                           Grid.Row="0" Grid.Column="0" Text="Необходимость внеплановой оценки технического состояния:" FontSize="14"/>
+                    <Switch x:Name="switchOTC" VerticalOptions="Start" Grid.Row="0" Grid.Column="1" Toggled="SwitchOTC_Toggled"/>
+                </Grid>
+                <BoxView HeightRequest="1" BackgroundColor="Accent" Opacity="0.8" />
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+
+    <ContentPage Title="Фотографии" Icon="Icons/photo.png" >
+        <ContentPage.Content>
+            <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Label Margin="5" HorizontalOptions="Start" FontSize="14" VerticalOptions="Fill" Text="Фотографии оценки ситуации:" />
+                <ListView x:Name="ListViewPhotos" HasUnevenRows="True" VerticalOptions="FillAndExpand" ItemTapped="ListViewPhotos_ItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <!--<Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Image Source="{Binding Image}" Grid.Row="0" Grid.Column="0" Margin="0,10,0,10" VerticalOptions="Center" 
+                                       HorizontalOptions="Center" Aspect="AspectFit" WidthRequest="200" HeightRequest="200"  />
+                                <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <local:MyButton WidthRequest="50" Clicked="Btn_fullscr_Clicked" Margin="2" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="50" 
+                                                x:Name="Btn_fullscr" Image="full_screen" Grid.Row="0" Grid.Column="1" BackgroundColor="#44104e8b" IsEnabled="{Binding IsPreview}"/>
+                                        <local:MyButton WidthRequest="50"  Clicked="Btn_delete_Clicked" Margin="2" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="50" 
+                                                x:Name="Btn_delete" Image="cancel_light" Grid.Row="0" Grid.Column="2" BackgroundColor="#44104e8b" IsEnabled="{Binding IsPreview}"/>
+                                    </Grid>
+                                    <Editor x:Name="EditTextPhoto" Margin="5" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" HeightRequest="150" 
+                                            Text="{Binding Comment}" BackgroundColor="#44104e8b" IsEnabled="{Binding IsPreview}" TextChanged="Comments_TextChanged"/>
+                                </StackLayout>
+                            </Grid>-->
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Clicked="Btn_delete_Clicked" CommandParameter="{Binding .}" Text="Удалить" IsDestructive="True" />
+                                </ViewCell.ContextActions>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="250" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <!--<Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="ImageGrid_Tapped" />
+                                    </Grid.GestureRecognizers>-->
+                                    <Image Source="{Binding Image}" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" 
+                                               HorizontalOptions="Center" Aspect="AspectFit">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="Btn_fullscr_Clicked"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                    <!--<Button Grid.Row="0" Grid.Column="0" Clicked="Btn_fullscr_Clicked" VerticalOptions="Fill"
+                                            BackgroundColor="Transparent" BorderColor="Transparent" HorizontalOptions="Fill" Margin="10">
+                                        <Button.Opacity>
+                                            <OnPlatform x:TypeArguments="x:Double"
+                                                        iOS="1"
+                                                        Android="0" />
+                                        </Button.Opacity>
+                                    </Button>-->
+                                    <Entry x:Name="EditTextPhoto" Placeholder="[Комментарий отсутствует]" Grid.Row="1" Grid.Column="0" 
+                                       Margin="10" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" FontSize="14"
+                                       Text="{Binding Comment}" IsEnabled="{Binding IsPreview}" TextColor="Black" HorizontalTextAlignment="Center" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <BoxView HeightRequest="1" BackgroundColor="Accent" Opacity="0.8" />
+                <!--<controls:ImageButton x:Name="AddPhotoButton" Text="Добавить фотографию" BackgroundColor="Accent" TextColor="White" HeightRequest="75" Image="camera_light.png"
+                                      Orientation="ImageToLeft" ImageHeightRequest="50" ImageWidthRequest="50" Margin="10, 5, 10, 5" Clicked="ImageButton_Clicked"/>-->
+                <Button x:Name="AddPhotoButton" Text="Добавить фотографию" BackgroundColor="Accent" TextColor="White" ContentLayout="Left, 10"
+                        HeightRequest="75" Image="camera_light.png" Margin="10, 5, 10, 5" Clicked="ImageButton_Clicked" />
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+</customRenderers:MyContentPage>

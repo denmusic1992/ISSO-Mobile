@@ -1,0 +1,4 @@
+Keystore pass:	p@ssword
+alias: 		abdm
+alias pass:	,Fcnbjy1
+

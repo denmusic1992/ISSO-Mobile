@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customRenderes="clr-namespace:ISSO_I.CustomRenderes"
+             xmlns:cachedImage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="ISSO_I.IssoViewPages.ForDefectTable.Views.AdditionalDefectParametersContentView">
+    <ContentView.Content>
+        <ScrollView Margin="0, 0, 0, 30">
+            <StackLayout>
+                <Label Margin="10" HorizontalOptions="Fill" Text="Дополнительные характеристики дефекта"
+                 Style="{StaticResource LabelStandard}" HorizontalTextAlignment="Center"/>
+                <Frame BorderColor="Accent" Padding="5" CornerRadius="5" HorizontalOptions="FillAndExpand" Margin="10"
+                 BackgroundColor="Transparent">
+                    <StackLayout>
+                        <Label Text="Локализация" Style="{StaticResource LabelSmall}" HorizontalOptions="Fill"
+                         VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="10" />
+                        <customRenderes:CustomEditor Style="{StaticResource LabelStandard}" Margin="0" VerticalOptions="FillAndExpand"
+                          Placeholder="[укажите локализацию (необязательно)]" PlaceholderColor="Gray"
+                          HorizontalOptions="Fill" Text="{Binding Localization}" />
+                    </StackLayout>
+                </Frame>
+                <Frame BorderColor="Accent" Padding="5" CornerRadius="5" HorizontalOptions="FillAndExpand" Margin="10"
+                 BackgroundColor="Transparent">
+                    <StackLayout>
+                        <Label Text="Дополнительная информация" Style="{StaticResource LabelSmall}" HorizontalOptions="Fill"
+                         VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="10" />
+                        <customRenderes:CustomEditor Style="{StaticResource LabelStandard}" Margin="0" VerticalOptions="FillAndExpand"
+                          Placeholder="[укажите доп. информацию (необязательно)]" PlaceholderColor="Gray"
+                          HorizontalOptions="Fill" Text="{Binding AdditionalInformation}"/>
+                    </StackLayout>
+                </Frame>
+                <Label Margin="10" HorizontalOptions="Fill" Text="Фотография дефекта"
+                       Style="{StaticResource LabelStandard}" HorizontalTextAlignment="Center" />
+                <Frame BorderColor="Accent" Padding="5" CornerRadius="5" HorizontalOptions="Fill" Margin="10" VerticalOptions="Center"
+                       BackgroundColor="Transparent">
+                    <AbsoluteLayout VerticalOptions="CenterAndExpand">
+                        <cachedImage:CachedImage AbsoluteLayout.LayoutBounds="0.5, 0.5, 1, 1"
+                                                 AbsoluteLayout.LayoutFlags="All" Aspect="AspectFit"
+                                                 Source="{Binding DefectImage}">
+                            <cachedImage:CachedImage.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding PictureTouched}"></TapGestureRecognizer>
+                            </cachedImage:CachedImage.GestureRecognizers>
+                        </cachedImage:CachedImage>
+                        <ImageButton AbsoluteLayout.LayoutBounds="0, 0, 20, 20"
+                                     AbsoluteLayout.LayoutFlags="XProportional, YProportional"
+                                     BackgroundColor="Transparent" Source="close_button_black.png" Command="{Binding CloseAndDelete}" IsVisible="{Binding HasPhoto}"/>
+                        <ImageButton AbsoluteLayout.LayoutBounds="1, 0, 50, 50"
+                                     AbsoluteLayout.LayoutFlags="XProportional, YProportional" BackgroundColor="Accent" CornerRadius="10"
+                                     Source="camera_light.png" Command="{Binding AddDefectPhoto}"/>
+                    </AbsoluteLayout>
+                </Frame>
+                <!--<Grid Margin="10" ColumnSpacing="1" RowSpacing="1" Padding="1" BackgroundColor="Black">
+              <Grid.RowDefinitions>
+                  <RowDefinition Height="*"/>
+                  <RowDefinition Height="*"/>
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*" />
+                  <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <StackLayout Grid.Row="0" Grid.Column="0" BackgroundColor="White">
+                  <Label Text="Локализация" Style="{StaticResource LabelSmallWithMargin}" />
+              </StackLayout>
+              <StackLayout Grid.Row="0" Grid.Column="1" BackgroundColor="White">
+                  <Entry Style="{StaticResource LabelInTable}" Text="{Binding Localization}" />
+              </StackLayout>
+              <StackLayout Grid.Row="1" Grid.Column="0" BackgroundColor="White">
+                  <Label Text="Дополнительная информация" Style="{StaticResource LabelSmallWithMargin}" />
+              </StackLayout>
+              <StackLayout Grid.Row="1" Grid.Column="1" BackgroundColor="White">
+                  <Entry Style="{StaticResource LabelInTable}" Text="{Binding AdditionalInformation}"/>
+              </StackLayout>
+          </Grid>-->
+            </StackLayout>
+        </ScrollView>
+
+
+        <!--<Grid>
+          <Grid.RowDefinitions>
+              <RowDefinition Height="*" />
+              <RowDefinition Height="*" />
+          </Grid.RowDefinitions>
+          
+          <StackLayout Grid.Row="1">
+              <BoxView HeightRequest="1" Color="Accent" Margin="10, 0, 10, 0" />
+              <Label Margin="10, 0, 10, 0" HorizontalOptions="Fill" Text="Характеристика дефекта по ремонтопригодности"
+                     Style="{StaticResource LabelStandard}" />
+              <Grid Margin="10" ColumnSpacing="1" RowSpacing="1" Padding="1" BackgroundColor="Black">
+                  <Grid.RowDefinitions>
+                      <RowDefinition Height="*"/>
+                      <RowDefinition Height="*"/>
+                  </Grid.RowDefinitions>
+                  <Grid.ColumnDefinitions>
+                      <ColumnDefinition Width="*" />
+                      <ColumnDefinition Width="2*" />
+                  </Grid.ColumnDefinitions>
+                  <StackLayout Grid.Row="0" Grid.Column="0" BackgroundColor="White">
+                      <Label Text="Прямая ремонтная работа" Style="{StaticResource LabelSmallWithMargin}" />
+                  </StackLayout>
+                  <StackLayout Grid.Row="0" Grid.Column="1" BackgroundColor="White">
+                      <Picker Margin="10, 0, 10, 0" ItemsSource="{Binding RemWorks}" />
+                  </StackLayout>
+                  <StackLayout Grid.Row="1" Grid.Column="0" BackgroundColor="White">
+                      <Label Text="Объем ремонтной работы" Style="{StaticResource LabelSmallWithMargin}" />
+                  </StackLayout>
+                  <StackLayout Grid.Row="1" Grid.Column="1" BackgroundColor="White">
+                      <Entry Style="{StaticResource LabelInTable}" Text="{Binding VolumeRemWorks}"/>
+                  </StackLayout>
+              </Grid>
+          </StackLayout>
+      </Grid>-->
+    </ContentView.Content>
+</ContentView>

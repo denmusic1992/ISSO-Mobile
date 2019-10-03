@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ISSO_I.IssoViewPages.ForDefectTable.Views.QualityParametersTreeView">
+    <ContentView.Content>
+        <StackLayout Margin="0, 0, 0, 30">
+            <Label Style="{StaticResource LabelStandard}" Text="Выбор качественного параметра" Margin="10"
+                   HorizontalTextAlignment="Center" />
+            <BoxView HeightRequest="1" Margin="10, 0, 10, 0" BackgroundColor="Accent" />
+            <ScrollView x:Name="TreeStackLayout" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+            <!--<Label Style="{StaticResource LabelSmall}" TextColor="Red" x:Name="LabelWarn"
+                   Text="{Binding SelectedQualDefectParameter.GetBdrg}" HorizontalTextAlignment="Center" />-->
+            <!--#region Область для показа выбранного качественного дефекта, пока остается закомментированной-->
+            <!--<StackLayout>
+                <BoxView HeightRequest="1" Color="Accent" Margin="10, 0, 10, 0" />
+                <Label Style="{StaticResource LabelSmall}" Text="Выбранный качественный параметр:" Margin="10, 0, 10, 0" />
+                <Grid Margin="10, 0, 10, 40">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="0" Style="{StaticResource LabelSmall}" Text="{Binding ChosenQualityParameter}"/>
+                    <Label Grid.Column="1" Style="{StaticResource LabelSmall}" Text="{Binding ChosenBdrg}"/>
+                </Grid>
+            </StackLayout>-->
+            <!--#endregion -->
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

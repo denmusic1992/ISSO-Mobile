@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ISSO_I.PopupTypes.SelectedListViewPopupPage">
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="White">
+            <ListView VerticalOptions="Center" HorizontalOptions="Center" HasUnevenRows="True" x:Name="lvitems" Margin="10" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding Content}" FontSize="Small" Style="{StaticResource LabelSmall}" Margin="0, 10, 0, 10" />
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="Подтвердить изменения" Clicked="button_confirm_Clicked"  Style="{StaticResource ButtonStandard}" />
+        </StackLayout>
+</ContentView>

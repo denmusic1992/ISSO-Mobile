@@ -1,0 +1,3 @@
+include ':app', ':ksoap2-android-assembly-3.1.1-jar-with-dependencies', ':mupdf-android-master', ':expandablelistview'
+include ':gestureimageview'
+project(':expandablelistview').projectDir = new File('app/libs/library')

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ISSO_I.PopupTypes"
+             x:Class="ISSO_I.PopupTypes.FullScreenImageContainer">
+    <ContentPage.Content>
+        <StackLayout Padding="20" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Black">
+            <Button HorizontalOptions="End" VerticalOptions="Center" x:Name="btn_close" Text="X" TextColor="White" BackgroundColor="#77FFFFFF" Clicked="btn_close_Clicked" />
+            <local:PinchToZoomContainer VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <local:PinchToZoomContainer.Content>
+                <Image x:Name="image_to_zoom" />
+            </local:PinchToZoomContainer.Content>
+            </local:PinchToZoomContainer>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
